@@ -6,7 +6,7 @@ const navigation = {
       featured: [
         {
           name: "New Arrivals",
-          href: "lehenga-choli",
+          href: "women/clothing/lehenga-choli",
           imageSrc:
             "https://images.unsplash.com/photo-1503160865267-af4660ce7bf2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW5kaWFuJTIwZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D",
           imageAlt:
@@ -14,7 +14,7 @@ const navigation = {
         },
         {
           name: "Basic Tees",
-          href: "jackets",
+          href: "women/clothing/jackets",
           imageSrc:
             "https://img.freepik.com/free-photo/fashion-girls_1157-5472.jpg?semt=ais_hybrid&w=740&q=80",
           imageAlt:
@@ -68,7 +68,7 @@ const navigation = {
       featured: [
         {
           name: "New Arrivals",
-          href: "jackets",
+          href: "men/clothing/suits",
           imageSrc:
             "https://images.pexels.com/photos/1342609/pexels-photo-1342609.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           imageAlt:
@@ -76,7 +76,7 @@ const navigation = {
         },
         {
           name: "Artwork Tees",
-          href: "mens-jeans",
+          href: "men/clothing/mens-jeans",
           imageSrc:
             "https://img.freepik.com/free-photo/arrangement-different-traveling-elements_23-2148884922.jpg?semt=ais_hybrid&w=740&q=80",
           imageAlt:
