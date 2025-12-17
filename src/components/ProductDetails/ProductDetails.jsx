@@ -13,15 +13,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { findProductsById } from "../../state/Product/Action";
 import { addItmeToCart } from "../../state/Cart/Action";
 import SimilarProducts from "./SimilarProducts";
-
 export default function ProductDetails() {
+  
   const navigate = useNavigate();
   const params = useParams();
 
   const dispatch = useDispatch();
   const { product } = useSelector((store) => store.product);
+  const {auth} = useSelector((store)=>store.auth);
   const [mainImage, setMainImage] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
+  const [openModal, setOpenModal] = useState(false);
+
   useEffect(() => {
     const data = { productId: params.productId };
     dispatch(findProductsById(data));
@@ -34,7 +37,12 @@ export default function ProductDetails() {
   }, [product]);
 
   const handleAddToCart = () => {
-    if (!selectedSize) {
+    if (!auth?.user) {
+    alert("Please register/login first!");
+    navigate("/");
+    return;
+  }
+  if (!selectedSize) {
       alert("Please select a size before adding to cart");
       return;
     }
