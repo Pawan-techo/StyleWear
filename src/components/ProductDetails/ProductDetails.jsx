@@ -14,13 +14,12 @@ import { findProductsById } from "../../state/Product/Action";
 import { addItmeToCart } from "../../state/Cart/Action";
 import SimilarProducts from "./SimilarProducts";
 export default function ProductDetails() {
-  
   const navigate = useNavigate();
   const params = useParams();
 
   const dispatch = useDispatch();
   const { product } = useSelector((store) => store.product);
-  const {auth} = useSelector((store)=>store.auth);
+  const { user } = useSelector((store) => store.auth);
   const [mainImage, setMainImage] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [openModal, setOpenModal] = useState(false);
@@ -37,12 +36,12 @@ export default function ProductDetails() {
   }, [product]);
 
   const handleAddToCart = () => {
-    if (!auth?.user) {
-    alert("Please register/login first!");
-    navigate("/");
-    return;
-  }
-  if (!selectedSize) {
+    if (!user) {
+      alert("Please register/login first!");
+      navigate("/");
+      return;
+    }
+    if (!selectedSize) {
       alert("Please select a size before adding to cart");
       return;
     }
@@ -110,9 +109,7 @@ export default function ProductDetails() {
                 <div
                   key={idx}
                   className={`aspect-square overflow-hidden rounded-md border-2 cursor-pointer ${
-                    mainImage === image
-                      ? "border-gray-600"
-                      : "border-gray-200"
+                    mainImage === image ? "border-gray-600" : "border-gray-200"
                   }`}
                   onClick={() => setMainImage(image)}
                 >
@@ -314,10 +311,11 @@ export default function ProductDetails() {
           </div>
         </section>
         <div className="mt-3">
-        <SimilarProducts
-          category={product?.category.name}
-          currentProductId={product?._id}
-        /></div>
+          <SimilarProducts
+            category={product?.category.name}
+            currentProductId={product?._id}
+          />
+        </div>
       </div>
     </div>
   );
