@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const categories = [
+const categorie = [
   {
     title: "Women",
     key:"women",
@@ -32,7 +32,7 @@ export default function Categories() {
       </h2>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-        {categories.map((cat, i) => (
+        {categorie.map((cat, i) => (
           <div
             key={i}
             className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer group"

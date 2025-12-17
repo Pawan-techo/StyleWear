@@ -3,7 +3,7 @@ import MainCarousel from "../components/Customer/HomeCorousel/MainCarousel.jsx"
 import HomeSectionCards from '../components/Customer/HomeSectionCard/HomeSectionCard.jsx';
 import TwoSideCard from '../components/Customer/HomeSectionCard/TwoSideCard.jsx';
 import OurFeatures from '../components/Customer/HomeSectionCard/Ourfeatures.jsx';
-import Categories from '../components/Customer/HomeSectionCard/categories.jsx';
+import Categories from '../components/Customer/HomeSectionCard/Categories2.jsx';
 
 const Home = () => {
   return (
