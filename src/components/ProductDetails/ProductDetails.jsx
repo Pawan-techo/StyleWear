@@ -22,7 +22,6 @@ export default function ProductDetails() {
   const { user } = useSelector((store) => store.auth);
   const [mainImage, setMainImage] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
-  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     const data = { productId: params.productId };
@@ -50,7 +49,7 @@ export default function ProductDetails() {
       size: selectedSize,
     };
     dispatch(addItmeToCart(data));
-    navigate("/cart");
+     window.location.href = "/cart";
   };
 
   const averageRating =
