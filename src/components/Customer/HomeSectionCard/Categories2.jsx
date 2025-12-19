@@ -41,7 +41,6 @@ export default function Categories() {
               src={cat.img}
               alt={cat.title}
               className="w-full h-85 group-hover:scale-105 transition-transform duration-500"
-              onClick={() => navigate(`/category/${cat.key}`)}
             />
 
             <div className="absolute bottom-0 w-full bg-black/40 backdrop-blur-md text-white p-5 ">
