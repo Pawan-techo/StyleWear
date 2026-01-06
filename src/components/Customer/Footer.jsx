@@ -9,7 +9,7 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-6 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 mb-2">
         <div>
           <h3 className="text-white font-semibold text-lg mb-4">Shop</h3>
           <ul className="space-y-2 text-sm">
@@ -59,8 +59,8 @@ const Footer = () => {
             </button>
           </div>
                     
-        <div className="mt-2">
-           <div className="flex space-x-4">
+        <div className="mt-3">
+           <div className="flex space-x-3">
             <a
               href="#"
               className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition"
